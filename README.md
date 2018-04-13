@@ -12,6 +12,7 @@ It clings very loosely to the "standard" brainfuck rules, with some exceptions, 
 
 ## Usage
 > ./bfi.py \[--repl\] \[--file \<file\>\]
+
 In repl mode, 'exit' may be typed in the console to exit (duh).
 
 ## Limitations
@@ -25,5 +26,5 @@ with the current tape pointer position in  parentheses.
 And the input prompt (invoked by ',') being
 > input\> 
 
-##TODO
+## TODO
 * Store chars as their decimal equivalents (i.e. unicode decimal values), as opposed to Python's string objects. This will allow programs to print chars without input.
