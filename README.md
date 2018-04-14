@@ -1,14 +1,13 @@
 # brainfuck-interpreter
 
-Baseed off of/ported from (with some improvements) [Thomas Cort's BFI](http://esoteric.sange.fi/brainfuck/impl/interp/BFI.c).
+Based off of/ported from (with some improvements) [Thomas Cort's BFI](http://esoteric.sange.fi/brainfuck/impl/interp/BFI.c).
 
 This is a simple brainfuck interpreter that runs BF scripts and boasts a somewhat limited interactive interpreter, written in python.
-It clings very loosely to the "standard" brainfuck rules, with some exceptions, as outline below.
-*Note: This was just a fun little evening project, so there is a LOT of room for improvement - which I hope to do sometime.*
+It clings very loosely to the "standard" brainfuck rules, with some exceptions, as outlined below.
 
 [This](https://esolangs.org/wiki/Brainfuck) site was pretty helpful.
 
-**Loads of fun stuff [here](http://esoteric.sange.fi/brainfuck/)**
+**Loads of fun stuff [here](http://esoteric.sange.fi/brainfuck/).**
 
 ## Usage
 > ./bfi.py \[--repl\] \[--file \<file\>\]
@@ -24,7 +23,8 @@ In repl mode, 'exit' may be typed in the console to exit (duh).
 In repl mode, the BF prompt looks like
 > (0)\> 
 
-with the current tape pointer position in  parentheses.
+with the current tape pointer position in parentheses.
+
 And the input prompt (invoked by ',') being
 > input\> 
 
