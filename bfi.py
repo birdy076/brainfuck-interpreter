@@ -46,7 +46,7 @@ def evaluate(): #evaluates contents of the code buffer and does things according
         elif buff[execptr] == '.': #'.' prints the value of the cell under pointer
             print(chr(tape[pointer])) #converts the decimal under pointer to char and prints it
         elif buff[execptr] == ',': #',' will store a value in the cell under pointer from user input
-            x = ord(input('input> '))
+            x = ord(input('input> ')[0]) #stores first char of input as decimal
             tape[pointer] = x
         elif buff[execptr] == '[': #'[' will jump past the matching ']' if value under pointer is zero
             if tape[pointer] == 0:
