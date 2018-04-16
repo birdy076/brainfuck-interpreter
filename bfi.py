@@ -44,13 +44,9 @@ def evaluate(): #evaluates contents of the code buffer and does things according
         elif buff[execptr] == '-': #'-' decrements the cell under pointer by one
             tape[pointer] -= 1
         elif buff[execptr] == '.': #'.' prints the value of the cell under pointer
-            print(tape[pointer])
+            print(chr(tape[pointer])) #converts the decimal under pointer to char and prints it
         elif buff[execptr] == ',': #',' will store a value in the cell under pointer from user input
-            x = input('input> ')
-            try:
-                x = int(x) #will try to convert the value to int, otherwise it will be stored as char
-            except:
-                pass
+            x = ord(input('input> '))
             tape[pointer] = x
         elif buff[execptr] == '[': #'[' will jump past the matching ']' if value under pointer is zero
             if tape[pointer] == 0:
