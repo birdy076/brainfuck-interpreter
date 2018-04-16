@@ -28,5 +28,4 @@ with the current tape pointer position in parentheses.
 And the input prompt (invoked by ',') being
 > input\> 
 
-## TODO
-* Store chars as their decimal equivalents (i.e. unicode decimal values), as opposed to Python's string objects. This will allow programs to print chars without input.
+Note: I have changed the way characters are stored on the tape. Instead of storing chars as Python string objects it will store their ascii decimal equivalents. The same applies to printing the values in cells - the value will be converted to its ascii equivalent. I made this change to make my interpreter work more like Thomas Cort's BFI.
