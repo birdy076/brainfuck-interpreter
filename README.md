@@ -15,17 +15,18 @@ It clings very loosely to the "standard" brainfuck rules, with some exceptions, 
 In repl mode, 'exit' may be typed in the console to exit (duh).
 
 ## Limitations
-* Tape size is set to 300 by default - change the tapesize variable if you want something different
-* After assigning cells with chars using the ',' command, you will not be able to increment or decrement them. The exception to this is if the char is a number.
 * In repl mode the arrow keys will not move the cursor.
+* By default, the '.' will print the ascii equivalent of the value under the tape pointer.
+	* This can be changed by editing line 49 in bfi.py, by removing the chr() function and its corresponding parentheses.
+	* Note: ',' will still convert the first character of input to its ascii equivalent.
 
 ## REPL Prompts
 In repl mode, the BF prompt looks like
-> (0)\> 
+> (0|0)\> 
 
-with the current tape pointer position in parentheses.
+with the current tape pointer position and value of the current cell in parentheses.
 
 And the input prompt (invoked by ',') being
-> input\> 
+> \> 
 
-Note: I have changed the way characters are stored on the tape. Instead of storing chars as Python string objects it will store their ascii decimal equivalents. The same applies to printing the values in cells - the value will be converted to its ascii equivalent. I made this change to make my interpreter work more like Thomas Cort's BFI.
+Note: I have changed the way characters are stored on the tape. Instead of storing chars as Python string objects it will store their ascii decimal equivalents. The same applies to printing the values in cells - the value will be converted to its ascii equivalent. Look in Limitations for info on how to change this. I made this change to make my interpreter work more like Thomas Cort's BFI.
